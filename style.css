@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: "poppins", sans-serif;
+}
+.content {
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    background-color: #ddd;
+}
+.to-do-app {
+    width: 100%;
+    max-width: 540px;
+    background-color: #fff;
+    margin: 100px auto;
+    padding: 40px;
+    border-radius: 10px;
+}
+.to-do-app h2 {
+    text-align: center;
+    margin: 20px 0;
+    color: blue;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    font-size: 40px;
+}
+.to-do-app div {
+    background-color: #ddd;
+    padding: 10px 10px 10px 30px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+}
+.to-do-app div input {
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+    flex: 1;
+    font-size: 20px;
+}
+.to-do-app div button {
+    border: none;
+    outline: none;
+    background-color: blue;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+}
+.to-do-app ul {
+    margin: 30px 0;
+}
+.to-do-app ul li {
+    padding: 10px 8px 10px 50px ;
+    list-style: none;
+    color: blue;
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.to-do-app ul li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background-image: url(img/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    width: 25px;
+    height: 25px;
+}
+.to-do-app ul li.checked{
+    color: #ddd;
+    text-decoration: line-through;
+}
+.to-do-app ul li.checked::before {
+    background-image: url(img/check.png);
+}
+.to-do-app ul li span {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    font-size: 25px;
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s ease;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    color: red;
+}
+.to-do-app ul li span:hover {
+    background-color: #eee;
+}
